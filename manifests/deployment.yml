@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: balajimarquezeshoponcontainers 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: balajimarquezeshoponcontainers
+  template:
+    metadata:
+      labels:
+        app: balajimarquezeshoponcontainers 
+    spec:
+      containers:
+        - name: balajimarquezeshoponcontainers 
+          image: balajiaks.azurecr.io/balajimarquezeshoponcontainers
+          ports:
+          - containerPort: 80
